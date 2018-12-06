@@ -23,9 +23,22 @@
     foreach($identity as $key => $value){
     echo "-$key:$value<br />";
     }
-    
-    function printarray(){
+    $students = array(array("name" => "He1" , "StudentID" => "IT10151697" , "major"=> "IT"),
+                      array("name" => "He2" , "StudentID" => "IT10151695" , "major"=> "IT"),
+                      array("name" => "He3" , "StudentID" => "IT10151694" , "major"=> "IT"));
+    /*
+     * failure for multidimensional vector
+    foreach($students as $key => $value){
 
-
+        echo "-$key:$value<br />";
     }
+    function printArray($field){
+        echo "Flower:".$field[0] .$field[1]."<br/>";
+    }
+    array_walk($students , "printArray");
+    */
+    foreach($students as $value1){
+    foreach($value1 as $key=>$value2)
+        echo $key."  ".$value2."<br/>";
+}
 ?>
