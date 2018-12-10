@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book Information</title>
+    <script>
+        function validation(){
+            alert("hello world");
+        }
+    </script>
+</head>
+<body>
+<form method= "post" action = "Book.php" onsubmit="return validation();">
+    <fieldset style = "text-align:right ; width:350px;">
+        <legend>Your data</legend>
+        Book Name:<input name="bookname" type="text" size="30" maxlength="30" /><br/>
+        Title  : <input name = "title" type="text" size="30" maxlength = "30"/><br/>
+        author:<input name="author" type ="text" size = "30" maxlength="30" /><br/>
+        <select name="status">
+            <option>the status of the book</option>
+            <option value="buy">buy</option>
+            <option value="read">read</option>
+            <option value="finished">finished</option>
+        </select><br/>
+        <input type="radio" name="rate" value="1"/>1
+        <input type="radio" name="rate" value="2"/>2
+        <input type="radio" name="rate" value="3"/>3
+        <input type="radio" name="rate" value="4"/>4
+        <input type="radio" name="rate" value="5"/>5
+        <input type="radio" name="rate" value="6"/>6<br/>
+    </fieldset>
+
+    <fieldset style="text-align:right ; width: 350px;">
+        <legend>Your comment</legend>
+        <textarea name ="comment" cols="40" rows="6"></textarea><br/>
+
+    </fieldset>
+    <p>
+        <input type="submit" value="Submit" />
+        <input type="submit" value="Reset" />
+
+    </p>
+
+</form>
+
+</body>
+</html>
