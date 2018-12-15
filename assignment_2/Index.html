@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book Station</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Style the header */
+        .header {
+            background-color: #f1f1f1;
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+        }
+
+
+        /* Container for flexboxes */
+        .row {
+            display: -webkit-flex;
+            display: flex;
+        }
+
+        /* Create three equal columns that sits next to each other */
+        .column {
+            -webkit-flex: 1;
+            -ms-flex: 1;
+            flex: 1;
+            padding: 10px;
+            height: 300px; /* Should be removed. Only for demonstration */
+        }
+
+        /* Style the footer */
+        .footer {
+            background-color: #f1f1f1;
+            padding: 10px;
+            text-align: center;
+        }
+
+        /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+        @media (max-width: 600px) {
+            .row {
+                -webkit-flex-direction: column;
+                flex-direction: column;
+            }
+        }
+        input{
+                width:600px;
+                height: 200px;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+<h2>Choose your option</h2>
+</div>
+<div class="row">
+    <div class="column" style="background-color:#aaa;">
+
+
+
+<form method="post" action="Book.html">
+    <input type="submit" value ="create new book" name="book" onaction = "book.html"></input>
+</form>
+    </div>
+    <div class="column" style="background-color:#bbb;">
+<form method="post" action="rating.php">
+    <input  type="submit" value ="status" name="status" onaction = "status.php"></input>
+</form>
+    </div>
+    <div class="column" style="background-color:#ccc;">
+<form method="post" action="status.php">
+    <input class="button"type="submit" value ="title" name="title" onaction="title.php"></input>
+</form>
+    </div>
+    <div class="column" style="background-color:#ddd;">
+<form method="post" action="title.php">
+    <input type="submit" value = "rating" name="rating" onaction="rating.php"></input>
+</form>
+    </div>
+</div>
+</body>
+</html>

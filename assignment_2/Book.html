@@ -3,25 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <title>Book Information</title>
-    <script>
-        function validation(){
-            alert("hello world");
-        }
-    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <style>
+       #example1 {
+           border: 1px solid black;
+           background:url("sleep.jpg");
+           background-size: 100px 80px;
+           background-repeat: no-repeat;
+
+           padding:15px;
+       }
+
+       #example2 {
+           border: 1px solid black;
+           background:url(sleep.jpg);
+           background-repeat: no-repeat;
+           padding:15px;
+       }
+       .center{
+            display:block;
+           width:500px;
+           text-align : center ;
+
+       }
+
+   </style>
 </head>
-<body>
-<form method= "post" action = "Book.php" onsubmit="return validation();">
-    <fieldset style = "text-align:right ; width:350px;">
-        <legend>Your data</legend>
-        Book Name:<input name="bookname" type="text" size="30" maxlength="30" /><br/>
-        Title  : <input name = "title" type="text" size="30" maxlength = "30"/><br/>
-        author:<input name="author" type ="text" size = "30" maxlength="30" /><br/>
-        <select name="status">
-            <option>the status of the book</option>
+<body >
+<div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
+<h2 class=" w3-center">Input Book Information</h2>
+
+<form  class="w3-center w3-container" method= "post" action = "Book.php" >
+    <fieldset class="w3-center"  style = "text-align:right ; width:350px;">
+        <legend class="w3-center">Your data</legend>
+        Book Name:<input class="w3-center" name="bookname" type="text" placeholder="Name" size="30" maxlength="30" /><br/>
+        Title  : <input class="w3-center" name = "title" type="text" placeholder="Title" size="30" maxlength = "30"/><br/>
+        author:<input class="w3-center" name="author" type ="text" placeholder="Author" size = "30" maxlength="30" /><br/>
+        <select name="status" class="w3-center">
+            <option >the status of the book</option>
             <option value="buy">buy</option>
             <option value="read">read</option>
             <option value="finished">finished</option>
         </select><br/>
+        the rate of the book
         <input type="radio" name="rate" value="1"/>1
         <input type="radio" name="rate" value="2"/>2
         <input type="radio" name="rate" value="3"/>3
@@ -30,18 +57,21 @@
         <input type="radio" name="rate" value="6"/>6<br/>
     </fieldset>
 
-    <fieldset style="text-align:right ; width: 350px;">
+    <fieldset class="w3-center" style="text-align:right ; width: 350px;">
         <legend>Your comment</legend>
-        <textarea name ="comment" cols="40" rows="6"></textarea><br/>
+        <textarea placeholder="comment" name ="comment" cols="40" rows="6"></textarea><br/>
 
     </fieldset>
     <p>
         <input type="submit" value="Submit" />
-        <input type="submit" value="Reset" />
+
 
     </p>
 
 </form>
-
+    <form method="post" action="index.html">
+        <input type="submit" value="Back" name="back"/>
+    </form>
+</div>
 </body>
 </html>
